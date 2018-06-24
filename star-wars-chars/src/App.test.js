@@ -1,0 +1,12 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import { render, unmountComponentAtNode } from 'react-dom';
+import { Route, Link, MemoryRouter } from 'react-router-dom';
+import { Simulate } from 'react-addons-test-utils';
+
+it('renders without crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(<App />, div);
+  ReactDOM.unmountComponentAtNode(div);
+});
